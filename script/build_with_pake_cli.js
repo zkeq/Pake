@@ -88,7 +88,7 @@ const main = async () => {
   if (!fs.existsSync('output')) {
     fs.mkdirSync('output');
   }
-  mv(`${new URL(process.env.URL).hostname.split('.').slice(-2, -1)[0].replace(/^./, str => str.toUpperCase());}`, 'output/');
+  mv(`${new URL(process.env.URL).hostname.split('.').slice(-2, -1)[0].replace(/^./, str => str.toUpperCase())}*`, 'output/');
   console.log('Build Success');
   cd('../..');
 };
